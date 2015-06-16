@@ -6,7 +6,7 @@ public static void FoodSorter(String food){
 	String NewFood = food;
 	String Foodbytime[]= {"Breakfast", "Lunch", "Dinner"};
 	
-	for(int i =0;i<=2;i++){
+	for(int i =0;i<=Foodbytime.length-1;i++){
 		if(NewFood.equals(Foodbytime[i])){
 			if(Foodbytime[i].equals(Foodbytime[0])){
 				Breakfast.BreakfastDecider();
@@ -36,7 +36,7 @@ public static void FoodBringer(String data){
 		
 	String Data = data; // The data given by the user is stored into a proper String.
 	
-	for(int i=0; i<=2;i++){			//A for loop so a proper food decision can be made on which food category the user has inputed.
+	for(int i=0; i<=Food.length-1;i++){			//A for loop so a proper food decision can be made on which food category the user has inputed.
 		if(Data.equals(Food[i])){
 			if(Food[i].equals(Food[0])){
 				

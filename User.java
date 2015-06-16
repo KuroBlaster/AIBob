@@ -33,19 +33,39 @@ public class User {
 	{
 		this.age = age;
 	}
+	public void LactoseFinder(String value){			// Method to compute if Lactose-intolerant or not.
+		String value1= value;
+		String yes = "y";
+		
+		if(yes.equals(value1)){
+			Boolean truthvalue = true;
+			
+		}
+		Boolean truthvalue = false;
+		lactoseIntolerant=truthvalue;
+		}
 	
-	public void setLactoseIntolerant(boolean lactoseIntolerant)
+	public boolean getLactoseIntolerant()
 	{
-		this.lactoseIntolerant = lactoseIntolerant;
+		return lactoseIntolerant;
 	}
 	
-	public void setGlutenFree(boolean glutenFree)
-	{
-		this.glutenFree = glutenFree;
+	public void GluttenFinder(String value){			// Method to compute if Glutten-free or not.
+		String value1= value;
+		String yes = "y";
+		
+		if(yes.equals(value1)){
+			Boolean truthvalue = true;
+			
+		}
+		Boolean truthvalue = false;
+		glutenFree=truthvalue;
+		}
+		
+	public boolean getGlutten(){
+	
+		return glutenFree;
+	
 	}
-	
-	
-	
-	
-	
+		
 }

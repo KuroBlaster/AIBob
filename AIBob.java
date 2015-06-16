@@ -16,8 +16,25 @@ import java.util.ArrayList;
 		//Create new user, assign name and user number
 		
 		User newUser = new User(scanner.nextLine());	//Takes the user input and saves into a User-name.
+		
 		userList.add(newUser); // Creates a new user in the User class.
+		
+		System.out.println("Hi "+newUser.getUserName()+"! Can you tell me how old are you?");
+		int Userage = scanner.nextInt();
+		newUser.setAge(Userage);
+		
+		System.out.println("If you are lactose intolerant, please write y/n\n");
+		String input = scanner.nextLine();		
+		newUser.LactoseFinder(input);
+		
+		System.out.println("If you want your food glutten free, please write y/n\n");
+		String otherinput = scanner.nextLine();		
+		newUser.GluttenFinder(otherinput);
+		
+		
 		System.out.println("Hi "+newUser.getUserName()+". What can I do for you today? \n");
+		
+		
 		
 		
 		// User UserName = new User();
@@ -35,21 +52,7 @@ import java.util.ArrayList;
 		
 	
 		}
-
-	
-		
-		public static void NewUserPref(User newUser){
-			System.out.println(newUser.getUserName());
-		
-		}
-	
-	
-	
-	
-	
-	
-	
-	
 	}
 	
-
+		
+		
