@@ -7,11 +7,29 @@ import java.util.ArrayList;
 		public static ArrayList<User> userList = new ArrayList<User>();
 
 		public static void main (String args[]){
+		Scanner scanner = new Scanner(System.in);
+			
+		System.out.println("Hello! My name is Bob, are you an existing user or you want to make a new accunt? ");	
 		
+		String UserQuantifier = scanner.nextLine();
+		String[] check = {"exist","new"};
+		
+		
+		if(UserQuantifier.contains(check[0])){
+			
+		System.out.println("Can you tell me name your please?");
+		}
+		
+		String Givenname = scanner.nextLine();
+		
+		if(userList.contains(Givenname)){
+			// update the values in the user class
+			
+		}
 		
 		System.out.println("Hello! My name is Bob, what is your name? ");
 		
-		Scanner scanner = new Scanner(System.in);
+		
 		
 		//Create new user, assign name and user number
 		
@@ -23,15 +41,31 @@ import java.util.ArrayList;
 		int Userage = scanner.nextInt();
 		newUser.setAge(Userage);
 		
-		System.out.println("If you are lactose intolerant, please write y/n\n");
-		String input = scanner.nextLine();		
+		System.out.println("If you are lactose intolerant, please write y/n ");
+		String input = scanner.next();		
 		newUser.LactoseFinder(input);
 		
-		System.out.println("If you want your food glutten free, please write y/n\n");
-		String otherinput = scanner.nextLine();		
+		System.out.println("If you want your food glutten free, please write y/n ");
+		String otherinput = scanner.next();		
 		newUser.GluttenFinder(otherinput);
 		
+		System.out.println("If you are vegetarian or non-vegetraian, please write y/n ");
+		String dainput = scanner.next();		
+		newUser.VegorNonveg(dainput);
 		
+		System.out.println("If you are vegan, please write y/n ");
+		String jainput = scanner.next();		
+		newUser.Vegan(jainput);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
 		System.out.println("Hi "+newUser.getUserName()+". What can I do for you today? \n");
 		
 		
@@ -50,8 +84,9 @@ import java.util.ArrayList;
 		FoodLibrary.FoodBringer(Demand); // Calls the FoodLibrary to ask what type of food the user wants.
 		
 		
-	
+	*/
 		}
+	
 	}
 	
 		

@@ -11,6 +11,10 @@ public class User {
 	private boolean vegan;
 	
 	
+		
+	
+	
+	
 	//Default constructor for class User
 	public User(String userName)
 	{	
@@ -33,11 +37,16 @@ public class User {
 	{
 		this.age = age;
 	}
-	public void LactoseFinder(String value){			// Method to compute if Lactose-intolerant or not.
-		String value1= value;
-		String yes = "y";
-		
-		if(yes.equals(value1)){
+	public int getAge()
+	{
+		return age;
+	}
+	
+	
+	
+	 public void LactoseFinder(String value){						// Method to compute if Lactose-intolerant or not.
+		String yes = "y";  											// Could be an array of values
+		if(yes.equals(value)){										// /If array of values can use enchanced for loop
 			Boolean truthvalue = true;
 			
 		}
@@ -50,11 +59,10 @@ public class User {
 		return lactoseIntolerant;
 	}
 	
-	public void GluttenFinder(String value){			// Method to compute if Glutten-free or not.
-		String value1= value;
-		String yes = "y";
+	public void GluttenFinder(String value){						// Method to compute if Glutten-free or not.
+			String yes = "y";
 		
-		if(yes.equals(value1)){
+		if(yes.equals(value)){
 			Boolean truthvalue = true;
 			
 		}
@@ -68,4 +76,37 @@ public class User {
 	
 	}
 		
+	public void VegorNonveg(String value){			// Method to compute if vegetarian or non-vegetarian
+		String yes = "y";							// Could be an array of values
+													
+		if(yes.equals(value)){						// /If array of values can use enchanced for loop
+			Boolean truthvalue = true;
+			
+		}
+		Boolean truthvalue = false;
+		vegetarian=truthvalue;
+		}
+		
+	public boolean getVegorNonveg(){
+		return vegetarian;
+	
+	}
+	
+	public void Vegan(String value){			// Method to compute if vegetarian or non-vegetarian
+		String yes = "y";							// Could be an array of values
+													
+		if(yes.equals(value)){						// /If array of values can use enchanced for loop
+			Boolean truthvalue = true;
+			
+		}
+		Boolean truthvalue = false;
+		vegan=truthvalue;
+		}
+		
+	public boolean getVegan(){
+		return vegan;
+	
+	}
+
+
 }
